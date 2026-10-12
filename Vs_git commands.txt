@@ -1,3 +1,5 @@
+
+
 ##############################################
 github username changed to mdraju116.
 So you have to check the remote origin, then set it to new one.
@@ -7,7 +9,11 @@ So you have to check the remote origin, then set it to new one.
 
 3.git remote -v  (check again)
 
-4.check any changes in the local code:(paste all at once)
+
+##############################################
+check any changes in the local code:
+
+(paste all at once)
 git fetch origin
 git branch -vv
 git status -sb
