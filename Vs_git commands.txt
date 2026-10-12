@@ -1,0 +1,109 @@
+##############################################
+github username changed to mdraju116.
+So you have to check the remote origin, then set it to new one.
+
+1.git remote -v (copy the last part=> code-lab.git) and replace in the url
+2.git remote set-url origin https://github.com/mdraju116/code-lab.git
+
+3.git remote -v  (check again)
+
+4.check any changes in the local code:(paste all at once)
+git fetch origin
+git branch -vv
+git status -sb
+git status --ignored --short
+git ls-files --others --exclude-standard
+
+If it returs this then all are okay:
+* main 3f0e424 [origin/main] file-moved ## main...origin/main
+or :* main cae8959 [origin/main] c17-7-8 ## main...origin/main
+
+##############################################
+If GitHub has new commits that you don't have locally, you can use:
+git pull --rebase origin main
+git push origin main
+
+
+
+
+#################################################################
+#################################################################
+//First Time commands for a new project
+
+
+##############################################
+🚀 Step 1: Create a New Repository
+
+Go to your GitHub profile:
+👉 GitHub
+
+Click New Repository
+Name it (example):
+records-management
+✅ Make it Public
+Click Create repository
+
+
+//////////////////////////////////////
+Step 2: Upload Your Project Files
+Go to your vs code terminal , make sure that the you are inside the target folder :
+(PS C:\Users\raju2\OneDrive\Desktop\Web\3.2_JavaScript course (chai aur code)> ):
+(or,you can click on the folder addressbar and type cmd.)
+
+type this codes:(you can get this in github repo page)
+
+git init
+git add .  //(dot means add all)
+git commit -m "your any message like(first-commit)"
+git branch -M main
+
+git remote add origin https://github.com/Raju204116/records-management.git  //this link will change for a new project
+
+git push -u origin main
+
+
+
+//////////////////////////////////////
+🌐 Step 3: Enable GitHub Pages
+Go to your repo
+Click Settings
+Scroll to Pages
+Under Source:
+Select: Deploy from a branch
+Branch: main
+Folder: / (root)
+Click Save
+
+//////////////////////////////////////
+🔗 Step 4: Get Your Live Link
+
+After ~10–30 seconds, 
+you need to reload the page and you’ll get:
+
+https://raju204116.github.io/records-management/
+
+👉 That’s your live project 🎉
+
+
+
+##############################################
+////////////////From second time://////////////////////
+These 3 commands you’ll need to repeat forever:
+
+git add .
+git commit -m "your message"
+git push
+
+
+
+##############################################
+short any long path: 
+(After opening terminal-powershell just paste it):
+function prompt { "$(Split-Path (Get-Location) -Leaf)> " }
+
+
+////////////////////
+shortcut to create a new repository :at the new tab type: repo.new (enter)
+
+
+

@@ -1,0 +1,76 @@
+✅ ➡️ ❌ ⚠️ 📌 ⭐ 💡 👍
+
+*****1.Shorting path********
+short any long path: (After opening terminal-powershell just paste it):
+
+function prompt { "$(Split-Path (Get-Location) -Leaf)> " }
+
+
+/////
+For using terminal-command prompt :
+type : prompt $n$g    //  this will show only C>
+
+But if you want to see full path again then type:
+prompt $p$g
+
+
+And if you want a customize name then type :
+prompt $n:\yourGivenName$g
+
+ex: prompt $n:\StyleGenFrontend$g   result: C:\StyleGenFrontend>
+
+
+/////////////////////////////
+In any folders address bar of pc
+type:cmd //terminal will open
+
+
+then type : code .   //vsCode will open
+
+
+/////////////////
+In any file of  VsCode 
+type : ctrl + j   //terminal will open
+
+
+
+
+
+<!-- Tips & Tricks -->
+
+👍 1.(ctrl + /) for auto comment & uncomment 
+👍 2.run the site by clicking the html file inside Module-1 (mypc) 
+👍 3. or Right click in any free space inside code , open with live server  
+
+👍 4.( alt+ shift+ down arrow ): for duplicating any line or block -->
+
+👍 5. shift + 1(!), then tab : for full html syntax 
+      shift + alt + f : for proper documenting
+
+👍 6.<p>lorem10 tab : dile 10 word er ekta para auto hoye jabe</p> 
+
+👍 7.In any file of  VsCode 
+  type : ctrl + j   //terminal will open
+
+
+👍8.text-align: center;   // Not only the text, but also the whole content of a box/div will go to center
+
+👍 9. type: link:css then tab
+  result :  <link rel="stylesheet" href="style.css">
+
+ NB: external file/folder add করার ক্ষেত্রে  ডট স্লাশ (./) ইউজ করতে হবে ।
+ তাহলে deploy এর সময় perfect ভাবে কাজ করবে । (./style/style.css  or   ./images/rj.jpg)
+
+👍 10.Use css emmet[ > ^ + $ . * # {} ()  ] to write shortcut code . (class-4-1)
+
+👍11. press(ctrl+c) to stop terminal execution(specially for infinit loop/execution)
+
+👍12. to rename multiple varibale/word at a time , 
+select one word, then press: (ctr+d) ,  then type new word. 
+
+👍13.To take an element/line  up/down press(alt + upArrow/downArrow)
+
+👍14.To install/use terminal while running the React project, Instead of kill the running terminal, click on the powershell plus icon, a new terminal will open. Now we can use both of these terminal.
+
+
+15. type : cd ..   to go back to previous directory

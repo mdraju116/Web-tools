@@ -1,0 +1,401 @@
+
+✅ ➡️
+
+#################################################################
+#################  Part-1:Main Languages    #####################
+
+
+##################### 1.Node ############################
+
+
+
+##################### 2.Tailwind CSS ############################
+
+=>We can use Tailwind in 2 way:
+
+✅✅Option-1.Use tailwind by Play-CDN
+
+    -go to: https://tailwindcss.com/docs/installation/play-cdn
+    -copy this :  
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4">
+        </script>
+    -paste inside <head> .... </head> tag
+
+    -Install (tailwind css intellicence) extension to get suggestion 
+    -(NB:To use the extension must [@import "tailwindcss"] at a extra css       file )-see the extension documentation
+    
+    -ready to use
+
+✅✅Option-2.Installing the tailwind -using vite (I will use this)
+
+   -go to : https://tailwindcss.com/docs/installation/using-vite
+
+   =>1.copy this :  npm install tailwindcss @tailwindcss/vite
+   -paste to : vscode project terminal
+
+
+   =>2.again copy : import { defineConfig } from 'vite' 
+           and : tailwindcss(),
+   -paste to the file named:vite.config.ts
+   (After pasting It will look like this -you can copy and paste it too)
+
+     import react from '@vitejs/plugin-react'
+     import { defineConfig } from 'vite'
+     import tailwindcss from '@tailwindcss/vite'
+     export default defineConfig({
+ 	  plugins: [react(),tailwindcss()],
+      })
+
+   =>3.again copy: @import "tailwindcss";
+   -paste to the file : index.css
+
+   -ready to use
+
+
+
+################### 3.TypeScript #######################
+✅✅Install Ts :
+
+
+✅✅Create a TS project/folder:
+	-At first create a tsconfig.json file inside the project folder
+		=>type: npx tsc --init
+		=>uncomment these:  "rootDir": "./src", 
+				    "outDir": "./dist",
+		=>rename : 	    "module": "NodeNext",
+		=>add(manually):"forceConsistentCasingInFileNames": true,
+	
+	-Then create a src folder inside the same project folder
+		=>then create a firstfile.ts inside the src folder
+	-Then to convert the ts file into js 
+	    -type : tsc (enter) -a dist folder will be created and
+	    -inside the dist a firstfile.js will be created automaticaly
+	
+
+
+✅✅Run using VsCode Terminal:
+	=>1.To run using watch (watch converts the ts file to js file)
+		-type : tsc firstfile.ts --watch
+		-type : node firstfile.js
+
+	=>2.To run using dist
+		-type : tsc (enter)
+		-type : node ./dist/firstfile.js (enter)
+	
+	I will Use this:
+	=>3.To run using src: install npm(only one time for a new vscode)
+		-type : npm i -g tsx  
+	-Then run directly : (no need to type tsc, instead use tsx only)
+		-type : tsx ./src/firstfile.ts
+	
+
+
+
+##################### 4.React ############################
+✅✅Install and Create First Project
+-Go to vite.dev  =>getting started =>Scaffolding Your First Vite Project => 
+   	
+	➡️➡️Option-1: copy : npm create vite@latest  (I will use it)
+
+  	➡️➡️Option-2: using create vite with command line options
+    	 -copy: npm create vite@latest my-vue-app -- --template vue 
+    	 -rename as :
+          npm create vite@latest my-first-project -- --template react-ts 
+
+
+-paste to local project directory (address bar) =>cmd 
+    	=>Ok to proceed? (y) (enter)
+    	=>Project name : My-first-project  -(Need to type)
+    	=>Package name:  my-first-project (small letter)  -(only enter)
+    	=>Select a framework => React
+   	 =>Select a variant =>TypeScript
+    	=>Which linter to use? => eslint  
+    	=>Install with npm and start now? => yes 
+    	-copy the local path and paste to browser : http://localhost:5173/
+
+   	-open vscode and open the my-first-project
+   	-here the app.tsx inside the src is the main part
+    
+
+
+
+-After opening the project:
+    	=>Install tailwind
+    	=>Install Daisy and others packages
+
+     	=>Create a React component 
+	-(component name must be start with Capital letter -ex:Nav.tsx)
+	-Inside Nav.tsx type :(rsc -tab)  (I will use this)
+	-or type : (rcf-di)  (choose rcf-di reactComponent)-tab  
+		 
+	-okay
+
+
+ ✅✅Run using VsCode Terminal:
+    -go to project folder: cd my-react-project
+    -npm install
+    -npm run dev
+
+    -then ctrl+click to the link Local:   http://localhost:5173/
+    -or copy and paste to browser.
+
+   =>📌Code Running flow: 
+    The link calls the index.html => main.tsx => App.tsx
+
+
+
+##################### 5. Next.js ############################
+✅✅Install and Create First Project
+
+	-go to : https://nextjs.org/docs/app/getting-started/installation
+
+=>1.Quick Setup/without src:
+	-select :Quick start => npm
+	-copy : npx create-next-app@latest my-app --yes
+	-paste to project folder : cmd 
+
+	-rename the project name :
+	 	  npx create-next-app@latest my-first-nextjs-app --yes
+	 NB: Never use Capital letter in project name
+
+	-Ok to proceed? (y) - y  enter 
+	-okay - open project in vsCode 
+	
+After create a new project, install daisy ui and other packages.
+
+=>2.Manually/with src:
+	-select :Create with the CLI => npm
+
+	-copy: npx create-next-app@latest
+	-paste to project folder : cmd 
+
+	-What is your project named? my-first-nextjs-app
+	-Would you like to use the recommended Next.js defaults?
+    		No, customize settings - Choose your own preferences
+	-Would you like to use TypeScript? Yes 
+
+	Which linter would you like to use? ESLint 
+	Would you like to use React Compiler? Yes
+	Would you like to use Tailwind CSS?  Yes
+	Would you like your code inside a `src/` directory?  Yes
+	Would you like to use App Router? (recommended)  Yes
+	Would you like to customize the import alias (`@/*` by default)?No
+	What import alias would you like configured? @/*
+	Would you like to include AGENTS.md to guide coding agents to 	write 	up-to-date Next.js code?  Yes
+
+
+
+
+ ✅✅Run using VsCode Terminal:
+    -go to project folder: cd my-first-nextjs-app
+    -npm run dev
+
+    -then ctrl+click to the link Local:   http://localhost:5173/
+    -or copy and paste to browser.
+
+
+
+
+
+
+############## 6. Better Auth and Mongodb (nextjs) ####################
+✅✅Install and configure
+	-go to https://better-auth.com/docs/installation
+
+➡️step-1:Install the Package
+	-copy : npm install better-auth
+	-paste to project directory
+
+➡️step-2:Set Environment Variables
+	-now create a .env file into the project
+	-go to site and Generate a secret key
+	-copy : BETTER_AUTH_SECRET=mJe44axqSVrGTZLd7NHiu8ReuD2DbLLG
+	-paste to .env file
+
+	-again go and copy the base 
+         url : BETTER_AUTH_URL=http://localhost:3000 # Base URL of your app
+	-paste to .env file
+
+➡️step-3:Create A Better Auth Instance
+	-now create folder lib (outside of the src/app) and 
+	-create a auth.ts file inside the lib 
+	-go to site and copy this:
+		import { betterAuth } from "better-auth";
+		export const auth = betterAuth({
+ 			 //...
+		});
+
+	-paste to auth.ts
+
+➡️step-4:Configure Database
+
+	-go to :(left side bar:databases=>mongodb)
+ 	 https://better-auth.com/docs/adapters/mongo
+	
+	-first install mongodb (only one time for new project)
+	-npm install mongodb
+	
+	-now copy: npm install @better-auth/mongo-adapter 
+	-and paste to terminal
+
+	-again copy the full Example Usage(auth.ts) and
+	-replace the code inside the previous auth.ts file with this
+	
+	=>auth.ts
+	import { betterAuth } from "better-auth";
+	import { MongoClient } from "mongodb";
+	import { mongodbAdapter } from "better-auth/adapters/mongodb";
+	const client = new MongoClient								("mongodb://localhost:27017/database");
+	const db = client.db();
+	export const auth = betterAuth({
+  		database: mongodbAdapter(db, {
+    			client
+  		}),
+	});
+
+
+➡️step-5:Connect Mongodb (not Create Database Tables)
+
+	-go to Mongodb atlas : https://www.mongodb.com/products/platform
+	-sign up/sign in with email
+
+	-go to homepage/all project
+	https://cloud.mongodb.com/v2#/org/6a06db01f7b3680fb6e16322/projects
+	-create a new project - give a project name and 
+	-go next and click on create project
+	-redirected to the overview page
+
+	-create a new cluster - 
+	-choose : free plan
+	-give a cluster name (default-Cluster0)
+	-provider : aws
+	-region : Virginia/anywhere
+	-click on Create deployment
+
+	-copy the username: raju204116_db_user (new for every new cluster)
+	-and password : wyy7dPB4bvIggkvn  
+	-save to anywhere : best case (save them in .env file)
+
+	-then click choose a connection method 
+	-click Drivers and client Libraries
+	-select :Language: Js   Client Library: Node.js Driver
+
+	-copy the uri :mongodb +srv://raju204116_db_user:
+	<db_password>@cluster0.djr5f2c.mongodb.net/?appName=Cluster0
+
+	-paste to .env file with a variable and change the password
+	-Like this :MONGODB_URI = mongodb +srv://raju204116_db_user:                  wyy7dPB4bvIggkvn@cluster0.djr5f2c.mongodb.net/?appName=Cluster0
+   	
+	-click done
+
+
+
+	=>now replace the auth url
+	-go to auth.ts
+	-change this : 
+      const client = new MongoClient("mongodb://localhost:27017/database");
+
+	-with this : 
+         const client = new MongoClient(process.env.MONGODB_URI!);
+	
+	-now give an database name: (auth.ts)
+	-change : const db = client.db(); 
+	-to : const db = client.db("nextjs-betterauth-db1");
+
+
+       ######## NB ###########
+	1.If you want to see the uri again, go to clusters,click on 		  	 Connect and you will see the interface again
+	
+	2.If you forgot the usename and password for this cluster:
+		Go to your MongoDB Atlas project.
+		In the left sidebar, go to Security → Database & Network 			Access (the exact menu wording can vary).
+		Open the Database Users tab.
+		You'll see the username you created.
+
+		For security, MongoDB Atlas does not show you the existing 			password.
+		If you forgot it, you can edit the database user and set a 			new password.
+
+
+
+ ➡️step-6 : Add Authentication Methods
+	-go to : https://better-auth.com/docs/installation
+	-copy:
+ 	 emailAndPassword: { 
+   		 enabled: true, 
+ 	 },
+	
+	-paste to auth.ts:
+
+	 export const auth = betterAuth({
+  		emailAndPassword: { 
+    		   enabled: true, 
+  		},
+  		database: mongodbAdapter(db, {
+    		client
+  		}),
+	});
+
+
+	-also add this at auth.ts for (need for vercel deploy):
+
+ 	export const auth = betterAuth({
+  	   baseURL: process.env.BETTER_AUTH_URL,
+  	   secret: process.env.BETTER_AUTH_SECRET,
+
+  	  // Keep your existing database adapter,
+          // email/password settings, and social providers.
+	});
+
+
+
+➡️step-7 : Mount Handler
+
+	-create 3 folder and a file like this:
+	-/app/api/auth/[...all]/route.ts
+
+	-go to : https://better-auth.com/docs/installation
+	-now copy this :
+	import { auth } from "@/lib/auth"; // path to your auth file
+	import { toNextJsHandler } from "better-auth/next-js";
+
+	export const { POST, GET } = toNextJsHandler(auth);
+
+	-and paste into route.ts
+
+➡️step-8 : Create Client Instance
+
+	-create a file inside the lib folder like this:
+	-lib/auth-client.ts
+	-now copy this :
+	import { createAuthClient } from "better-auth/react"
+	export const authClient = createAuthClient({
+   	   baseURL: "http://localhost:3000"
+	})
+
+	export const { signIn, signUp, useSession } = createAuthClient()
+	
+	-and paste to auth-client.ts
+
+	-now replace the base url like this:
+	- baseURL: process.env.BETTER_AUTH_URL
+
+-Okay -🎉 That's it!
+
+
+
+
+##################### 7. Node.js ############################
+
+
+
+
+
+
+
+
+
+
+
+
+
+

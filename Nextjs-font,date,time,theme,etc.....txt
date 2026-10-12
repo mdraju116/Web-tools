@@ -1,0 +1,82 @@
+
+
+####################### 1. Font(layout.tsx) #####################
+####### 1.Default font ###########
+import { Geist, Geist_Mono } from "next/font/google";
+
+const geistSans = Geist({
+   variable: "--font-geist-sans",
+   subsets: ["latin"],
+});
+
+className={`${geistSans.variable} h-full antialiased`}
+
+
+
+######## 2.Bangla Font##########
+import { Noto_Serif_Bengali} from "next/font/google";
+
+const notoSerifBengali = Noto_Serif_Bengali({
+  subsets: ["latin","bengali"],
+});
+
+className={`${notoSerifBengali} h-full antialiased`} 
+
+
+
+####################### 2.Theme (layout.tsx) #####################
+####### 1.Default theme ###########
+The website will take default theme of the window (for me : light)
+-so no need to change the theme data
+
+########2.Dark theme ##########
+
+=>Option-1:No need of CSS
+ <html
+      lang="en"
+       data-theme="dark"
+      // data-theme="light"
+      className={`${notoSerifBengali} h-full antialiased`} 
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+
+
+
+=>Option-2: Need CSS
+//full black
+ <html
+      lang="en"
+      className={`${geistSans.variable} h-full antialiased theme-dark`} 
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+ 
+
+//global.css
+.theme-dark {
+  background-color: #000000;
+  color: white;
+}
+
+
+
+####################### 3.Date (coponent/page.tsx) #####################
+
+//1.Date in English Lang:
+const date =new Date().toLocalDateString("en-US",{dateStyle:"full"});
+<div> <p>{date}</p> </div>
+//output:Saturday,26 September,2026
+
+
+//2.Date in Bangla Lang:
+const date =new Date().toLocalDateString("bn-BD",{dateStyle:"full"});
+<div> <p>{date}</p> </div>
+//output: শনিবার,২৬ সেপ্টেম্বর,২০২৬
+
+
+####################### 4.Time (coponent/page.tsx) #####################
+
+
+
+

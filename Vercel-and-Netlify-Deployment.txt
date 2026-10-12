@@ -1,0 +1,144 @@
+✅✅✅✅1.Netlify.com  -NextJs project can't deploy here
+
+=>In the vscode terminal-project directory:
+    -type : npm run build  (a dist folder will create automatically)
+
+=>Go to netlify.com
+	-login with google
+	-go to projects 
+	-Scroll down to : 
+    	   Production deploys
+        	Drag and drop your project folder here to deploy new 			changes.
+        	Or browse files to uploadNo file chosen or choose a folder 
+	-click on choose a folder 
+	-select the dist folder inside the project
+	-Upload and make it public
+
+📌link : https://ephemeral-rabanadas-388c7c.netlify.app/
+
+⚠️NB: After any change of the code, we need to build the project again and
+-drag and drop the folder again in the same deployment folder
+
+
+⚠️=>We can also do it by connecting github account
+-selecting diretly ropsitoty.
+
+
+✅✅✅✅2.Vercel.app
+
+###################################################################
+✅=>Option-1 : Using Dist Folder(CLI)--- (c29-4)
+
+1.=>In the vscode terminal-project directory:
+    -type : npm run build  (a dist folder will create automatically)
+
+2.=>login vercel 
+	-Click to Add New -project
+	-Scroll down to : You can also drag and drop your project, or 			choose a file or a folder.
+	-click choose a file or a folder.
+	-select the dist folder inside the project
+	-Upload and make it public
+
+3.=>For any changes in the code, 
+ 	-again do : npm run build  and 
+  	-redeploy the dist folder to Vercel
+
+📌link : https://country-explorer-six-xi.vercel.app/
+
+
+###################################################################
+✅=>Option-2 : Using github Repo --- (C36-9)  --This is the best way
+
+1.=>In the vscode terminal-project directory:
+    -type : npm run build  (to see the project has any error or not)
+    -If any error found, solve them first and push again to github.
+
+
+2.=>Login Vercel and connect github
+	-Click on Add New =>Project =>Import Git Repository
+	
+	-Select Repo (Import) 	      : Milestone-6
+	     -Select Edit for SubRepo : Module-36 
+	     -then select Book-vibe   : Book Vibe
+
+	*****NB: Some Repo may be not showed, (like devstack-5)
+	     In this case search them by their name
+
+	-Select Continue
+	-Rename the project name      : book-vibe
+
+	-Select Environment variables
+	-import .env file
+	-continue
+
+	-Select Deploy 
+	(don't need to configure the MongoDb Atlas )
+
+	-Continue to Dashboard
+
+	-Click on the domain link: https://book-vibe-blush-phi.vercel.app/
+	-Okay
+
+3.=>Change Environment Variables
+	-select to project
+	-Select EnvironMent Variables (vercel site -left side bar)
+	(NB: Environments and Environment Variables are two different
+         things)
+	-you can see all the variables here
+	-choose BETTER_AUTH_URL   (click on three dot - edit)
+	-add value as : paste the new domain after deploy
+	 https://bazar-dor-a7-one.vercel.app
+	-Tick on Production, Preview
+	-Click save
+	-click Redeploy.
+
+	
+
+	################################
+	-NB:
+	-For local api(public/data.json) : no api data will show now
+	-For that need to change the BETTER_AUTH_URL
+
+	-do like the step-3 
+
+	-Now the local booksData.josn will be used as global api
+	-check at : https://book-vibe-blush-phi.vercel.app/booksData.json
+
+
+4.=>After deploy completed, 
+	-change the Google and Github authentications
+	-set Homepage url as :https://bazar-dor-a7-one.vercel.app
+	-and Redirect url as :
+         https://bazar-dor-a7-one.vercel.app/api/auth/callback/github
+	
+6.=>Add this ip address at the Mongodb atlas:
+	-go to project/database&network/security/network access/
+	ip access list/
+	-click add Ip address
+	IP: 0.0.0.0/0
+	comment: Temporary Vercel connectivity test	
+
+7.=>For any changes in the code, 
+	-change code, check in  http://localhost:3000 (npm run dev)
+ 	-Commit and Push only to Github,
+ 	-no need to redeploy in vercel.
+
+
+###################################################################
+✅✅✅=> VVI : For any Local api=> public/data.json
+
+	-create a bookvibe(root)/.env file and create a variable
+	=NEXT_PUBLIC_SERVER_BASE_URL = http://localhost:3000
+
+	-change all the fetch url with that variable (use backtick ``)
+	=const response = await fetch(`     			
+	 ${process.env.NEXT_PUBLIC_SERVER_BASE_URL}/data/booksData.json`);
+
+
+	-Now build,then push and deploy to vercel
+
+	
+
+
+
+

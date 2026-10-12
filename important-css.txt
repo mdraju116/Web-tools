@@ -1,0 +1,2 @@
+max-width-6xl mx-auto  //take at center
+container mx-auto px-24  //gap at both side 

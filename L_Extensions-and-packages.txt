@@ -1,0 +1,271 @@
+#####################################################################
+############## Part-1:Extensions ####################################
+
+
+##################### 0.Overall For all languages ####################
+1.Live Preview (Microsoft)
+2.Live Server (Ritwick Dey
+3.Material Icon Theme (Philipp Kief)
+4.Microsoft Edge Tools for VS Code (Microsoft)
+5.npm Intellisense (Christian Kohler)
+6.Path Intellisense (Christian Kohler)
+7.Save Typing (Michel Betancourt)
+8.Search node_modules (Jason Nutter)
+9.vscode-pdf (tomoki1207)
+
+
+##################### 1.Tailwind CSS ############################
+1.Tailwind CSS IntelliSense (Tailwind Labs)
+
+
+
+##################### 2.JavaScript ############################
+1.JavaScript (ES6) code snippets (charalampos karypidis)
+2.ESLint (Microsoft)
+
+
+##################### 3.TypeScript ############################
+1.Typescript React code snippets (infeng)
+
+
+
+##################### 4.React ############################
+1.React Extension Pack (Rajbir Jawanda)
+2.Dracula Theme Official (Dracula)
+3.Modern React Typescript Snippets (Budi Irawan)
+4.Reactjs code snippets (charalampos karypidis)
+
+
+
+##################### Next.js ############################
+1.Nextjs WebPack
+Instead of using Turbopack use webpack(turbopack causes error for onedrive)
+
+➡️➡️Install :
+npx next dev --webpack
+
+➡️➡️Use:
+Inside package.json=>change the dev to this:
+"dev": "next dev --webpack",
+
+
+
+
+
+################################################################
+############## Part-2:Helper functions/packages/sites  #########
+
+################### 1.Daisy Ui #######################
+
+✅✅1-Install for react : 
+
+ 	-go to : https://daisyui.com/docs/install/
+        -copy : npm i -D daisyui@latest
+	-paste to vscode project folder's terminal
+        
+	-again copy : @plugin "daisyui";
+	-paste to the file : index.css/App.css
+
+	-ready to use
+
+✅✅2-Install for NextJs: 
+	-go to :https://daisyui.com/docs/install/nextjs/  
+	(i.e from installation docs select framwork = NextJs
+
+        -copy : npm install tailwindcss @tailwindcss/postcss 		daisyui@latest
+	-paste to vscode project folder's terminal
+        
+	-again copy :  @plugin "daisyui";
+	-paste to the file : gloabl.css
+
+	-ready to use
+
+
+
+✅✅Use a readymade component:
+        -go to : https://daisyui.com/components/
+	-choose any component (button/...)
+	-choose the design and copy the jsx code
+	-paste anywhere you need
+
+	-okay
+
+
+################### 2.Hero Ui #######################
+
+✅✅1-Install for NextJS : 
+
+	-go to :
+	  https://heroui.com/en/docs/react/getting-started/quick-start
+	-copy : npm i @heroui/styles @heroui/react
+	-paste and run to terminal
+	
+	-again go and copy : @import "@heroui/styles"; 
+	-paste at globals.css (under @import "tailwindcss";)
+	
+
+✅✅Use a readymade component:
+	-go to :https://heroui.com/en/docs/react/components
+	-choose any component and copy the code
+	-paste to anywhere you need
+
+	import { Button } from '@heroui/react';
+	function App() {
+  	  return (
+    		<Button>
+     			 My Button
+    		</Button>
+  	  );
+	}
+
+
+################### 3.gravity-ui #######################
+
+✅✅1-Install for NextJS : 
+	-go to :https://www.npmjs.com/package/@gravity-ui/icons
+	-copy : npm install --save-dev @gravity-ui/icons
+	-paste to terminal
+	
+	-again copy : import {Cloud} from '@gravity-ui/icons';
+	-and paste to the page.tsx where you will use the icons
+
+✅✅Use a readymade component:
+
+	-go to : https://gravity-ui.com/icons	
+	-select icons and copy the code
+	-or mainly used with Hero-Ui
+
+################### 4.React Icon #######################
+✅✅Install :
+	-go to :https://react-icons.github.io/react-icons/
+	-copy : npm install react-icons --save
+	-paste to vscode project terminal
+	
+
+✅✅Use a readymade Icon:
+	-search any icon : ex(user)
+	-choose icon and just copy : <FaUser />
+	-paste to anywhere you need
+
+	-import FaReact where you will use it :
+         import { FaReact } from "react-icons/fa"
+
+################### 5.React Toastify #######################
+
+✅✅Install :
+	-go to : https://www.npmjs.com/package/react-toastify
+	-copy : npm i --save react-toastify
+	-paste to vscode project terminal
+
+	-again copy : <ToastContainer />
+	-paste to : Main.tsx =>
+		createRoot(document.getElementById('root')!).render(
+  			<StrictMode>
+    				<App />
+				<ToastContainer />  
+  			</StrictMode>,
+		)
+
+	-NB: Must need to import : 
+         import { ToastContainer } from 'react-toastify'
+
+✅✅Use a readymade toast:
+	-just call toast.success /toast.error/.... where you need
+	
+	-or-again go to introduction -
+	 https://fkhadra.github.io/react-toastify/introduction/
+
+	-choose the type of toast and copy the Toast-Emmiter only
+	-paste to anywhere you need.
+
+
+################### 6.NextJs Toastify #######################
+
+✅✅Install :
+	-go to : https://www.npmjs.com/package/react-toastify
+	-copy : npm install --save react-toastify
+	-paste to vscode project terminal
+
+	-again copy : 
+	 import { ToastContainer } from 'react-toastify'
+	and <ToastContainer /> 
+	
+	-you can modify it : 
+	 <ToastContainer autoClose={2000} position="top-right"/>
+
+	-paste to : layout.tsx =>
+
+	<body className="min-h-full flex flex-col">
+        	<BooksProvider>
+          		<Navbar></Navbar>
+          		<main className="flex-1">
+           			 {children}
+          		</main>
+          		<Footer></Footer>
+			<ToastContainer autoClose={2000} 
+			position="top-right"/>
+        	</BooksProvider>
+         </body>
+
+	
+
+✅✅Use a readymade toast:
+	-import : import { toast } from "react-toastify";
+	-just call toast.success /toast.error/.... where you need
+	-toast.success("Successfully Signed Up.")
+
+	-or-again go to introduction -
+	 https://fkhadra.github.io/react-toastify/introduction/
+
+	-choose the type of toast and copy the Toast-Emmiter only
+	-paste to anywhere you need.
+         
+
+
+################### 7.NextJs Graph-Chart #######################
+
+✅✅Install :
+	go to: https://recharts.github.io/en-US/guide/installation/
+	copy : npm install recharts
+	paste to : vscode terminal
+
+
+✅✅Use :
+	go to example page : 			https://recharts.github.io/enUS/examples/CustomShapeBarChart/
+	
+	copy the source code: 
+	paste to a new component : GraphChart.tsx 
+	change the code according to gpt  ; (c36-9b-full guide)
+
+
+
+
+################### 8.Marquee Text (auto scroll) #######################
+
+✅✅Install :
+	-go to: https://www.npmjs.com/package/react-marquee-text
+	-copy : npm i react-marquee-text
+	-paste to : vscode terminal
+
+
+✅✅Use :
+	-import this two :
+		import MarqueeText from "react-marquee-text"
+		import "MarqueeText/styles.css"
+	
+	-modify the last one like this:
+		import "react-marquee-text/dist/styles.css"
+
+	-Call the Marquee like this :
+ 		<MarqueeText>
+      			//write your text here
+    		</MarqueeText>
+
+	-change direction and time:
+		<MarqueeText direction="right" duration={10}>
+      			Let's bring it on back to days of yore
+    		</MarqueeText>
+
+
+
+                                    
